@@ -1,0 +1,74 @@
+<!DOCTYPE html><!--indica que es html5-->
+<html lang="en">
+
+<head><!--sirve para metadatos titulo y css y solo en algunas casos para los scripts aunque no es la mejor forma-->
+  <!--los metadatos son instrucciones para el navegador de como comportarse-->
+  <meta charset="UTF-8"><!--etiqueta de autocierre no se mete nada adentro-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--proporciona la escala a la pantalla del dispositivo-->
+  <title>Repaso html</title>
+  <link rel="shortcut icon" href="./assets/img/gato.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body onload="generateRandom()">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span><!--icono que se despliega en modo responsive-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a id="searching" class="nav-link" href="#"><i data-feather="search"></i> &nbsp; Buscar GIF</a>
+            </li>
+            <li class="nav-item">
+              <a id="random" class="nav-link" href="#"><i data-feather="gift"></i> &nbsp; Random GIF</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4"></div>
+      <div id="contentrandom" class="col">
+
+      </div>
+    </div>
+  </div>
+  <div id="content" class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-4">
+        
+      </div>
+      <div class="col">
+        <label for="searc">Buscar GIF</label>
+        <input type="text" id="search" class="form-control" placeholder="..." onkeyup="search(event)">
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid my-4">
+    <div class="row">
+      <div id="gifs" class="col text-center">
+    
+      </div>
+    </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
+  <script src="./js/funciones.js"></script>
+</body>
+
+</html>
